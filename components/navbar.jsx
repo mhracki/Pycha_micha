@@ -1,19 +1,30 @@
 import Link from 'next/link'
 import React from 'react'
 
-const Navbar =() =>{
+const Navbar =({color}) =>{
   return (
-    <div className="flex nav">
-      <Link href="/"><img height="150px" src="/images/logo_black.svg"/></Link>
+    <div className={`flex nav ${color}`}>
+      <div className="img-container flex">  
+        <Link href="/">{color?<img height="100px" src="/images/logobk.png"/>:<img height="100px" src="/images/logowh.png"/>}</Link>
+      </div>
+    
+
+
       <ul className="flex link">
       <li>
-        <Link href="/menu">
+        <Link href="/">
+          <a>Strona główna</a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/menu#pierogi">
           <a>Menu</a>
         </Link>
       </li>
       <li>
+        
         <Link href="tel:+48-33-852-12-12">
-          <a>Zadzwoń Teraz</a>
+          <a className="call-us">Zadzwoń Teraz! </a>
         </Link>
       </li>
       <li>

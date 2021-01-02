@@ -38,7 +38,7 @@ const CategoriesList = () => {
 //       text: "dla młodzianów",
 //     },
 //   ];
-  return <div className="flex categories-list">
+  return <div className="flex categories-list" >
       {menuCategories.map(x=>{
           return <Category img={x.img} text={x.text}/>})}
   </div>;

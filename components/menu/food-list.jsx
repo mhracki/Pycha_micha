@@ -32,16 +32,16 @@ const FoodList = () => {
     },
   ];
   return (
-    <div>
+    <div className="food-list__container">
       {menuCategories.map((y) => {
         return (
-          <div className="flex food-list" key={y.text}>
+          <div className="flex food-list" id={y.text} key={y.text}>
             <div className="food-list__category__text-container">
               <div className="food-list__category__title"> {y.text}</div>
               <div className="food-list__category__desc">
                 {foodTable.map((x) => {
                   return (
-                    <div>
+                    <div key={x.title}> 
                       <Food
                         title={x.title}
                         description={x.description}

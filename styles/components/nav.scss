@@ -1,31 +1,70 @@
 .nav {
-  justify-content: space-between;
-  img{
-    margin-left:20px;
+  &.white {
+    background-color: white;
+    position: -webkit-fixed;
+    position: fixed;
+    width:100%;
+    ul {
+      li {
+        a {
+          color: black;
+          &:hover {
+            color: rgba(255, 94, 0, 0.822);
+          }
+          &.call-us {
+            border: solid 3px rgba(255, 94, 0, 0.822);
+            padding: 12px;
+            background-clip: padding-box;
+            background-color: transparent;
+            -webkit-background-clip: padding-box;
+            &:hover {
+              background-color: rgba(255, 94, 0, 0.822);
+              color: white;
+              transition: all 0.5s;
+            }
+          }
+        }
+      }
+    }
   }
-  img:hover{
-    cursor:pointer;
+  .img-container {
+    justify-content: center;
+    align-items: center;
+    height: 106px;
+  }
+  justify-content: space-between;
+  img {
+    margin-left: 20px;
+  }
+  img:hover {
+    cursor: pointer;
   }
   ul {
     list-style-type: none;
     width: 40%;
     justify-content: space-around;
-    li{
-        display: flex;
-        align-items: center;
-        font-size: 18px;
-        font-weight: 800;
-        a{
-            text-decoration: none;
-            text-transform: uppercase;
-            color: white;
+    li {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      font-weight: 800;
+      a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: white;
+      }
+      .call-us {
+        background-color: rgba(255, 94, 0, 0.822);
+        padding: 15px;
+        border-radius: 30px;
+        &:hover {
+          color: #111;
         }
-        a:hover{
-          color:orange;
-        }
-    
+      }
+      a:hover {
+        color: rgba(255, 94, 0, 0.822);
+      }
     }
-
   }
   background-color: #111;
 }

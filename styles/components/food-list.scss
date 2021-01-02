@@ -1,13 +1,22 @@
+html{
+  scroll-behavior: smooth;
+}
 .food-list {
   align-items: center;
   justify-content: space-between;
+ 
   &:nth-child(even){
     flex-direction: row-reverse;
+    background-color: rgba(255, 94, 0, 0.222);
   }
-
+  &__container{
+    padding-top:100px;
+  }
   &__img {
     width:50%;
-    max-height: calc(100vh - 100px);
+    max-height: calc(100vh - 110px);
+    overflow: hidden;
+
    
     img {
       height:100%;
