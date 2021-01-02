@@ -1,0 +1,31 @@
+.nav {
+  justify-content: space-between;
+  img{
+    margin-left:20px;
+  }
+  img:hover{
+    cursor:pointer;
+  }
+  ul {
+    list-style-type: none;
+    width: 40%;
+    justify-content: space-around;
+    li{
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        font-weight: 800;
+        a{
+            text-decoration: none;
+            text-transform: uppercase;
+            color: white;
+        }
+        a:hover{
+          color:orange;
+        }
+    
+    }
+
+  }
+  background-color: #111;
+}
