@@ -16,7 +16,7 @@ const menuCategories = [
       text: "makarony",
     },
     {
-      img: "/images/gyros.jpg",
+      img: "/images/burgery.jpg",
       text: "burgery",
     },
     {

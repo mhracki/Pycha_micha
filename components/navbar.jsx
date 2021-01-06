@@ -17,7 +17,7 @@ const Navbar =({color}) =>{
         </Link>
       </li>
       <li>
-        <Link href="/menu#pierogi">
+        <Link href="/menu">
           <a>Menu</a>
         </Link>
       </li>
