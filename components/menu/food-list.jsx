@@ -3,7 +3,24 @@ import React from "react";
 import menuCategories from "../../mock-api/menu-categories";
 import Food from "./food";
 
-const FoodList = () => {
+
+const FoodList = ({foodList}) => {
+  console.log(foodList);
+  const convertedList =()=>{
+    return  foodList.map( x=>{
+      return {
+        title:x.node.title,
+        list: x.node.field_menu.dish.map(y=>{
+          return{
+            name:y.name,
+            description:y.description,
+            price:y.price
+          }
+        })
+      }
+    })
+
+  }
   const foodTable = [
     {
       title: "Rosół",
@@ -33,17 +50,17 @@ const FoodList = () => {
   ];
   return (
     <div className="food-list__container">
-      {menuCategories.map((y) => {
+      {convertedList().map((y) => {
         return (
-          <div className="flex food-list" id={y.text} key={y.text}>
+          <div className="flex food-list" id={y.title} key={y.title}>
             <div className="food-list__category__text-container">
-              <div className="food-list__category__title"> {y.text}</div>
+              <div className="food-list__category__title"> {y.title}</div>
               <div className="food-list__category__desc">
-                {foodTable.map((x) => {
+                {y.list.map((x) => {
                   return (
-                    <div key={x.title}> 
+                    <div key={x.name}> 
                       <Food
-                        title={x.title}
+                        title={x.name}
                         description={x.description}
                         price={x.price}
                       />
@@ -55,6 +72,7 @@ const FoodList = () => {
             </div>
             <div className="food-list__img">
               <img src={y.img} alt={y.text} />
+              {console.log(convertedList())}
             </div>
           </div>
         );
