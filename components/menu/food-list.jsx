@@ -1,65 +1,50 @@
-import Link from "next/link";
-import React from "react";
-import menuCategories from "../../mock-api/menu-categories";
+import React, {useEffect} from "react";
+import { useRouter } from "next/router";
 import Food from "./food";
+import { getMedia } from "../../api/media";
+import { convertId } from "../../helpers/convert-string-to-id";
 
-const FoodList = () => {
-  const foodTable = [
-    {
-      title: "Rosół",
-      description: "z makaronem",
-      price: 8,
-    },
-    {
-      title: "Czosnkula",
-      description: "z boczkiem jajkiem i grzankami",
-      price: 12,
-    },
-    {
-      title: "Krem z pomidorów",
-      description: "podawany z grzankami",
-      price: 10,
-    },
-    {
-      title: "Pomidorowa",
-      description: "z ryżem",
-      price: 8,
-    },
-    {
-      title: "Flaki wołowe",
-      description: "z chlebem",
-      price: 15,
-    },
-  ];
+const FoodList = ({ foodList }) => {
+  const router = useRouter();
+
+  useEffect(() => {
+    if (window) {
+      window.scrollTo(0, 0);
+    }
+
+    const element = document.getElementById(router.query?.message?.toString());
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [router.query]);
+
   return (
     <div className="food-list__container">
-      {menuCategories.map((y) => {
+      {foodList.map((y) => {
         return (
-          <div className="flex food-list" id={y.text} key={y.text}>
+          <div className="flex food-list" id={convertId(y.name)} key={y.name}>
             <div className="food-list__category__text-container">
-              <div className="food-list__category__title"> {y.text}</div>
+              <div className="food-list__category__title"> {y.name}</div>
               <div className="food-list__category__desc">
-                {foodTable.map((x) => {
+                {y.dishes.map((x) => {
                   return (
-                    <div key={x.title}> 
+                    <div key={x.name}>
                       <Food
-                        title={x.title}
+                        name={x.name}
                         description={x.description}
                         price={x.price}
                       />
-                      
                     </div>
                   );
                 })}
               </div>
             </div>
             <div className="food-list__img">
-              <img src={y.img} alt={y.text} />
+              {y.img && <img src={getMedia(y.img)} alt={y.name} />}
             </div>
           </div>
         );
       })}
-      )
     </div>
   );
 };

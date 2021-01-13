@@ -2,20 +2,22 @@ import Head from "next/head";
 import FoodList from "../components/menu/food-list";
 import Navbar from "../components/navbar";
 import "../styles/menu.module.scss";
+import { fetchAPI } from "../api/api";
 
-export default function Menu() {
+export default function Menu({ menu }) {
   return (
     <div>
       <Head>
         <title>Menu - Pycha Micha</title>
       </Head>
       <Navbar color="white" />
-      <FoodList />
-      <div className="container">
-        <div>
-          <p className="redcol">asda</p>
-        </div>
-      </div>
+      <FoodList foodList={menu.categories} />
     </div>
   );
+}
+export async function getStaticProps() {
+  // Fetch global site settings from Strapi
+  const menu = await fetchAPI("menu");
+  // Pass the data to our page via props
+  return { props: { menu } };
 }

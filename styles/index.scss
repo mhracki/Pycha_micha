@@ -1,28 +1,26 @@
-@import 'shared';
-@import 'components/nav.scss';
-@import 'components/main-header.scss';
-@import 'components/category.scss';
-@import 'components/categories-list.scss';
-@import 'components/food-list.scss';
-@import 'components/food.scss';
-@import 'components/about-us.scss';
-
-
+@import "shared";
+@import "components/nav.scss";
+@import "components/main-header.scss";
+@import "components/category.scss";
+@import "components/categories-list.scss";
+@import "components/food-list.scss";
+@import "components/food.scss";
+@import "components/about-us.scss";
+@import "components/news-list.scss";
+@import "components/news.scss";
+@import "components/contact.scss";
 
 @font-face {
-    font-family: 'Poppins';
-    src: local('Poppins'), url(/fonts/Poppins-Regular.ttf) format('truetype');
-  }
-*{
-    font-family: Poppins,serif;
-    box-sizing: border-box;
-
-
+  font-family: "Poppins";
+  src: local("Poppins"), url(/fonts/Poppins-Regular.ttf) format("truetype");
 }
-body{
-    margin:0;
+* {
+  font-family: Poppins, serif;
+  box-sizing: border-box;
 }
-svg:hover{
-    fill:white;
+body {
+  margin: 0;
 }
-
+svg:hover {
+  fill: white;
+}

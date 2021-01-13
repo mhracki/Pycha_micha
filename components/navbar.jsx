@@ -4,10 +4,10 @@ import React from 'react'
 const Navbar =({color}) =>{
   return (
     <div className={`flex nav ${color}`}>
-      <div className="img-container flex">  
-        <Link href="/">{color?<img height="100px" src="/images/logobk.png"/>:<img height="100px" src="/images/logowh.png"/>}</Link>
+      <div className="img-container flex">
+        <Link href="/">{color?<img className="logo" src="/images/logobk.png"/>:<img className="logo"  src="/images/logowh.png"/>}</Link>
       </div>
-    
+
 
 
       <ul className="flex link">
@@ -22,18 +22,18 @@ const Navbar =({color}) =>{
         </Link>
       </li>
       <li>
-        
+
         <Link href="tel:+48-33-852-12-12">
-          <a className="call-us">Zadzwoń Teraz! </a>
+          <a className="call-us"><img  src="/images/call.svg"/>Zamów</a>
         </Link>
       </li>
       <li>
-        <Link href="/blog/o-nas">
-          <a>O nas</a>
+        <Link href="/blog">
+          <a>Blog</a>
         </Link>
       </li>
     </ul>
-      
+    {/*https://codesandbox.io/s/sidebar-using-react-burger-menu-o4bws?file=/src/styles.css*/}
     </div>
   )
 }
