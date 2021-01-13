@@ -1,0 +1,8 @@
+.news-list{
+    flex-direction: column;
+    &__title{
+        font-size: 34px;
+        font-weight: 900;
+        margin: 100px auto 0;
+    }
+}

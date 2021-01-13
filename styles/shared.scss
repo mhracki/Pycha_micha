@@ -26,7 +26,12 @@
     width: 1170px;
   }
   .container-big{
-    width: 1600px;
+    width: 1200px;
+  }
+}
+@media (min-width: 1400px) {
+  .container-big{
+    width: 1400px;
   }
 }
 .flex {

@@ -1,30 +1,29 @@
-import Link from "next/link";
-import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+import { useRouter } from "next/router";
 import React from "react";
+import { getMedia } from "../../api/media";
+import { convertId } from "../../helpers/convert-string-to-id";
 
 const Category = (props) => {
-  const { text, img } = props;
-  return (
-    <Link href={`/menu#${text}`}>
-    <ScrollLink activeClass="active"
-    to={`/menu#${text}`}
-    spy={true}
-    smooth={true}
-    offset={-70}
-    duration={500}
-    className="flex category"
-    key={text}
-    >
+  const { name, img } = props;
+  const router = useRouter();
 
+  const handleRedirect = () => {
+    router.push(
+      { pathname: "/menu", query: { message: convertId(name) } },
+      "menu"
+    );
+  };
+
+  return (
+    <div onClick={handleRedirect} className="flex category" key={name}>
       <div className="category__wrapper">
         <div className="category__wrapper-img">
-          <img src={img} alt={text} />
+          {img && <img src={getMedia(img)} alt={name} />}
         </div>
         <hr />
-        <div className="category__text flex">{text}</div>
+        <div className="category__text flex">{name}</div>
       </div>
-  </ScrollLink>
-    </Link>
+    </div>
   );
 };
 export default Category;
