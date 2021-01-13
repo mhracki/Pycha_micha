@@ -17,7 +17,7 @@ export default function Menu({ menu }) {
 }
 export async function getStaticProps() {
   // Fetch global site settings from Strapi
-  const menu = await fetchAPI("/menu");
+  const menu = await fetchAPI("menu");
   // Pass the data to our page via props
   return { props: { menu } };
 }

@@ -26,11 +26,11 @@ export default function Index({ menu }) {
         <NewsList/>
       </div>
       <Contact/>
-      
+
     </div>
   );
 };
 export async function getStaticProps() {
-  const menu = await fetchAPI("/menu");
+  const menu = await fetchAPI("menu");
   return { props: { menu } };
 }
