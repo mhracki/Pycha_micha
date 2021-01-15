@@ -1,3 +1,5 @@
+@import '../breakpoints.scss';
+
 .nav {
   &.white {
     background-color: white;
@@ -48,39 +50,46 @@
     }
   }
   ul {
-    list-style-type: none;
-    width: 40%;
-    justify-content: space-around;
-    li {
+    display: none;
+
+  }
+  background-color: #111;
+  @media (min-width: $sm) {
+    ul {
       display: flex;
-      align-items: center;
-      font-size: 18px;
-      font-weight: 800;
-      a {
-        text-decoration: none;
-        text-transform: uppercase;
-        color: white;
-      }
-      .call-us {
-        background-color: rgba(255, 94, 0, 0.822);
-        padding: 15px 25px;
-        border-radius: 30px;
+      list-style-type: none;
+      width: 40%;
+      justify-content: space-around;
+      li {
         display: flex;
-        font-size: 20px;
         align-items: center;
-        &:hover {
-          color: #111;
+        font-size: 18px;
+        font-weight: 800;
+        a {
+          text-decoration: none;
+          text-transform: uppercase;
+          color: white;
         }
-        img {
-          margin-right: 15px;
-          filter: invert(1);
-          height: 30px;
+        .call-us {
+          background-color: rgba(255, 94, 0, 0.822);
+          padding: 15px 25px;
+          border-radius: 30px;
+          display: flex;
+          font-size: 20px;
+          align-items: center;
+          &:hover {
+            color: #111;
+          }
+          img {
+            margin-right: 15px;
+            filter: invert(1);
+            height: 30px;
+          }
         }
-      }
-      a:hover {
-        color: rgba(255, 94, 0, 0.822);
+        a:hover {
+          color: rgba(255, 94, 0, 0.822);
+        }
       }
     }
   }
-  background-color: #111;
 }
