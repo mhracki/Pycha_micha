@@ -1,4 +1,5 @@
 import React from "react";
+import GoogleMap from "./map"
 
 const Contact = () => {
   return (
@@ -38,7 +39,7 @@ const Contact = () => {
             </div>
             <div className="map">
               <div className="map__wrapper">
-                <img src="../images/mapa.jpg" />
+                <GoogleMap/>
               </div>
             </div>
           </div>

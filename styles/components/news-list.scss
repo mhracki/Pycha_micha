@@ -1,3 +1,4 @@
+@import '../breakpoints.scss';
 .news-list{
     flex-direction: column;
     &__title{
@@ -5,4 +6,14 @@
         font-weight: 900;
         margin: 100px auto 0;
     }
+    margin-bottom: 100px;
+    .news-list-container{
+        flex-direction: column;
+    }
+    @media screen and(min-width:$sm) {
+        .news-list-container{
+            flex-direction:row;
+        }
+    }
+
 }

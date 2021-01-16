@@ -1,6 +1,13 @@
+@import "../breakpoints.scss";
+
 .category {
   padding: 10px 20px;
+  width: 100%;
+  @media (min-width: $sm) {
   width: 25%;
+
+
+  }
   &:hover {
     .category {
       &__wrapper {

@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import React from "react";
-import { getMedia } from "../../api/media";
-import { convertId } from "../../helpers/convert-string-to-id";
+import { getMedia } from "../../../api/media";
+import { convertId } from "../../../helpers/convert-string-to-id";
 
 const Category = (props) => {
   const { name, img } = props;

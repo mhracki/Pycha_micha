@@ -3,10 +3,10 @@ import "../styles/index.scss";
 import React from "react";
 import Navbar from "../components/navbar";
 import MainHeader from "../components/home/main-header";
-import CategoriesList from "../components/home/categories-list";
+import CategoriesList from "../components/home/category/categories-list";
 import AboutUs from "../components/home/about-us/about-us";
 import { fetchAPI } from "../api/api";
-import NewsList from '../components/home/news-list';
+import NewsList from '../components/home/news/news-list';
 import Contact from '../components/home/contact/contact';
 
 export default function Index({ menu }) {

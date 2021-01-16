@@ -32,7 +32,7 @@ const NewsList = () => {
   return (
     <div className="flex news-list">
       <div className="news-list__title">Aktualności</div>
-      <div className="flex">
+      <div className="flex news-list-container">
         {" "}
         {newsList.map((x) => {
           return (

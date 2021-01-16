@@ -5,8 +5,6 @@
   margin-left: auto;
 }
 .container-big {
-  padding-right: 10px;
-  padding-left: 10px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -14,6 +12,9 @@
   .container {
     width: 750px;
   }
+  .container-big {
+    padding-right: 10px;
+    padding-left: 10px;}
 }
 @media (min-width: 992px) {
   .container {
