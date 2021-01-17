@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <div className=" flex contact">
       <div className="contact__img-container">
-        <img src="../images/piwnica.jpg" />
+        <img src="../images/piwnica.webp" />
       </div>
       <div className="contact__container">
         <div className="contact__header"></div>
