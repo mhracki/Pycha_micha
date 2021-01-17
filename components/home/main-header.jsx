@@ -5,7 +5,7 @@ const MainHeader = () => {
   return (
     <div className="flex">
       <div className="wrapper">
-        <img className="main-photo" src="/images/burger1.jpg" />
+        <img className="main-photo" src="/images/burger1.webp" />
         <div className="slogan">
           Gorące smaczne
           <br />
