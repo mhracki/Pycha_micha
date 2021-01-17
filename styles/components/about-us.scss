@@ -6,6 +6,7 @@
   justify-content: flex-end;
   align-items: center;
   margin-bottom: 20px;
+  margin-top: 50px;
 
   &__img-container {
     position: absolute;
@@ -41,6 +42,8 @@
     }
   }
   @media screen and (min-width: $sm) {
+    margin-top: 100px;
+    
     &__img-container {
       position: relative;
 

@@ -119,6 +119,7 @@
 
         @media screen and(min-width:$sm) {
           width: 25%;
+          margin: unset;
         }
       }
       .map {
@@ -136,9 +137,9 @@
             padding: 20px;
           }
           .map-container {
-            height: 600px;
+            height: 400px;
             @media screen and(min-width:$sm) {
-              padding: 500px;
+              height: 500px;
             }
           }
         }
@@ -149,17 +150,19 @@
       margin-top: 20px;
       justify-content: space-between;
       display: none;
+      &.mobile{
+        display: block;
+        margin-top: 40px;
+      }
 
       @media screen and(min-width:$sm){
-        display: block;
+        display: flex;
         &.mobile{
           display: none;
         }
         
       }
-      &.mobile{
-        display: block;
-      }
+
       .btn-contact {
         width: 200px;
         padding: 20px 0;

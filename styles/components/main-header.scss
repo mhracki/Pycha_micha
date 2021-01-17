@@ -26,12 +26,17 @@
   padding-left: 5%;
   top: 5%;
   height: 100%;
+  width: 100%;
 
   @media screen and (min-width: $sm) {
     font-size: 60px;
     font-weight: 900;
     top: 20%;
     height: auto;
+  }
+  @media screen and (min-height: 735px)and (max-width: $sm) {
+    font-size: 45px;
+
   }
   .button {
     border: 3px solid white;

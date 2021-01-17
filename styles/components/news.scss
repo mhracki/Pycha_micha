@@ -3,7 +3,7 @@
     padding: 10px 20px;
     width: 100%;
 
-    @media screen and(min-height:$sm){
+    @media screen and(min-width:$md){
     width: 33%;
       
     }
