@@ -17,13 +17,13 @@ const RegularMap = withScriptjs(
       defaultCenter={ defaultCenter }
       defaultOptions={ defaultOptions }
     >
+    
       <Marker position={ defaultCenter } />
     </GoogleMap>
   ))
 );
 
 const loadingElementStyle = { height: '100%' };
-const containerElementStyle = { height: '100%' };
 const mapElementStyle = { height: '100%' };
 
 export default function GoogleMaps(){
@@ -31,7 +31,7 @@ export default function GoogleMaps(){
     <RegularMap
       googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCamI1L0aZmjb4VwMbpGBopYdmycG9nNI"
       loadingElement={<div style={ loadingElementStyle } />}
-      containerElement={<div style={ containerElementStyle } />}
+      containerElement={<div className="map-container" />}
       mapElement={<div style={ mapElementStyle } />}
     />
   );

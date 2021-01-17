@@ -1,4 +1,4 @@
-@import '../breakpoints.scss';
+@import "../breakpoints.scss";
 
 .contact {
   position: relative;
@@ -7,39 +7,60 @@
   align-items: center;
   margin-bottom: 20px;
   &__container {
-    width: 80%;
+    width: 100%;
 
     background-color: rgba($color: #fff, $alpha: 1);
-    position: absolute;
+    position: relative;
     display: flex;
     flex-direction: column;
-    @media screen and(width:$sm) {
+    @media screen and(min-width:$sm) {
       width: 60%;
-
-      }
-
+      position: absolute;
+    }
   }
   &__header {
     font-size: 16px;
     padding: 50px 50px 0px;
     font-size: 36px;
     font-weight: 900;
-    width: 25%;
-    margin-left: auto;  
+    margin-left: auto;
     margin-right: auto;
-    
-
+    margin-bottom: 20px;
+    &::before {
+      content: "Mapa";
+    }
+    @media screen and(min-width:$sm) {
+      margin-bottom: 0px;
+      width: 25%;
+      &::before {
+        content: "Kontakt";
+      }
+    }
+  }
+  .contact__header-mobile {
+    font-size: 16px;
+    padding: 50px 50px 0px;
+    font-size: 36px;
+    font-weight: 900;
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and(min-width:$sm) {
+      display: none;
+    }
   }
 
   &__img-container {
     min-height: 70vh;
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 100%;
     overflow: hidden;
     justify-content: center;
     align-items: center;
     display: flex;
+    @media screen and(min-width:$sm) {
+      position: relative;
+    }
 
     img {
       pointer-events: none;
@@ -53,56 +74,72 @@
   }
 
   &__wrapper {
-    padding: 10 10px 10px;
-    width: 80%;
+    padding: 10px 10px 10px;
+    width: 100%;
 
     display: flex;
     flex-direction: column;
-    @media screen and(width:$sm) {
-      width: 25%;
+    @media screen and(min-width:$sm) {
+      width: auto;
       padding: 0 50px 50px;
+    }
 
-        
-      }
-    
-    .line{
+    .line {
       width: 100%;
       height: 1px;
+      display: none;
+      @media screen and(min-width:$sm) {
+        display: block;
+      }
+      &-mobile {
+        @media screen and(min-width:$sm) {
+          display: none;
+        }
+      }
     }
     &-content {
       display: flex;
-      flex-direction:column;
+      flex-direction: column-reverse;
       align-items: center;
       justify-content: center;
       width: 100%;
 
-      @media screen and(width:$sm) {
-      flex-direction: row;
-        
+      @media screen and(min-width:$sm) {
+        flex-direction: row;
       }
       .address {
-        width:100%;
+        // width:100%;
         padding: 5px;
+        margin: auto;
 
-        @media screen and(width:$sm) {
+        &__wrap {
+          width: fit-content;
+          margin: auto;
+        }
+
+        @media screen and(min-width:$sm) {
           width: 25%;
-
-            
-          }
+        }
       }
       .map {
-        width: 75%;
+        width: 100%;
         display: flex;
         align-items: flex-end;
 
+        @media screen and(min-width:$sm) {
+          width: 75%;
+        }
         &__wrapper {
-          padding: 20px;
-          width:100%;
+          width: 100%;
           height: 100%;
-          img {
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
+          @media screen and(min-width:$sm) {
+            padding: 20px;
+          }
+          .map-container {
+            height: 600px;
+            @media screen and(min-width:$sm) {
+              padding: 500px;
+            }
           }
         }
       }
@@ -111,7 +148,18 @@
     .buttons {
       margin-top: 20px;
       justify-content: space-between;
+      display: none;
 
+      @media screen and(min-width:$sm){
+        display: block;
+        &.mobile{
+          display: none;
+        }
+        
+      }
+      &.mobile{
+        display: block;
+      }
       .btn-contact {
         width: 200px;
         padding: 20px 0;
@@ -123,12 +171,12 @@
         color: white;
         text-transform: uppercase;
         cursor: pointer;
-        &:hover{
+        &:hover {
           transition: all 0.5s;
-          color:black;
+          color: black;
           background-color: #fff;
         }
-        &:last-of-type{
+        &:last-of-type {
           background-color: rgba(255, 94, 0, 0.822);
           border-color: rgba(255, 94, 0, 0.822);
         }
