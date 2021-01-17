@@ -4,7 +4,7 @@ const AboutUs = () => {
   return (
     <div className=" flex about-us">
       <div className="about-us__img-container">
-        <img src="../images/about-us.webp" />
+        <img src="../images/about-us1.webp" />
       </div>
       <div className="about-us__text">
         <div className="about-us__text__title">O nas</div>
