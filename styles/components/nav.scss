@@ -1,11 +1,14 @@
 @import '../breakpoints.scss';
 
 .nav {
+  position: -webkit-fixed;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+
   &.white {
     background-color: white;
-    position: -webkit-fixed;
-    position: fixed;
-    width: 100%;
+
     ul {
       li {
         a {
@@ -48,7 +51,7 @@
     &:hover {
       cursor: pointer;
     }
-    @media screen and(min-width:$sm){
+    @media screen and(min-width:$lg){
     height: 100px;
       
     }
@@ -58,11 +61,11 @@
 
   }
   background-color: #111;
-  @media (min-width: $sm) {
+  @media (min-width: $lg) {
     ul {
       display: flex;
       list-style-type: none;
-      width: 40%;
+      width: 55%;
       justify-content: space-around;
       li {
         display: flex;
@@ -95,5 +98,10 @@
         }
       }
     }
+  }
+  @media (min-width: $xl){
+ul{
+  width:40%
+}
   }
 }

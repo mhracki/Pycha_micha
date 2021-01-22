@@ -6,17 +6,9 @@ const NewsList = () => {
     {
       title: "Dostawa już od dziś!",
       description:
-        "Od dzisiaj oferujemy darmową dostawę na terenie Cieszyna od 20zł!",
+        "UWAGA, UWAGA !! 😍😃😀        Z wielką przyjemnością informujemy Was, że od jutra 22.10.2020 nasza restauracja Pycha Micha wprowadza DOWÓZ 🚗🚗🚗🚗      Na terenie Cieszyna dowóz gratis, przy zamówieniu minimum 20 zł",
       date: "1.01.2021",
-      img: "../images/dowoz.jpg",
-      isMain:true
-    },
-    {
-      title: "Dostawa już od dziś!",
-      description:
-        "Od dzisiaj oferujemy darmową dostawę na terenie Cieszyna od 20zł!",
-      date: "1.01.2021",
-      img: " ",
+      img: '/images/van.svg',
       isMain:false
     },
     {
@@ -24,7 +16,15 @@ const NewsList = () => {
       description:
         "Od dzisiaj oferujemy darmową dostawę na terenie Cieszyna od 20zł!",
       date: "1.01.2021",
-      img: " ",
+      img: null,
+      isMain:true
+    },
+    {
+      title: "Dostawa już od dziś!",
+      description:
+      "Godziny pracy zostały zmienione. ",
+      date: "1.01.2021",
+      img: '/images/delivery.jpg',
       isMain:false
     },
   ];
@@ -40,7 +40,7 @@ const NewsList = () => {
               key={x.title}
               title={x.title}
               img={x.img}
-              name={x.description}
+              description={x.description}
               date={x.date}
             />
           );

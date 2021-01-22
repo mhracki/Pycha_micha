@@ -43,11 +43,11 @@
   }
   @media screen and (min-width: $sm) {
     margin-top: 100px;
-    
+
     &__img-container {
       position: relative;
-
-      min-height: 70vh;
+      height: 70vh;
+      min-height: 700px;
     }
     &__text {
       position: absolute;
@@ -55,6 +55,11 @@
       background-color: rgba($color: #fff, $alpha: 0.9);
 
       padding: 50px;
+      width: 70%;
+    }
+  }
+  @media screen and (min-width: $lg) {
+    &__text {
       width: 50%;
     }
   }

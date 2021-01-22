@@ -1,20 +1,21 @@
-.food{
-    width:100%;
-    justify-content: space-between;
-    &__text{
-        display: flex;
-        flex-flow: column;
-        flex-wrap: wrap;
-        &__description{
-            font-style: italic;
-            padding-bottom: 20px;
-           
-        }
-        &__title{
-            font-weight: bold;
-        }
+.food {
+  width: 100%;
+  justify-content: space-between;
+  padding-bottom: 20px;
+
+  &__text {
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+
+    &__description {
+      font-style: italic;
     }
-    &__price{
-        align-self: flex-end;
+    &__title {
+      font-weight: bold;
     }
+  }
+  &__price {
+    align-self: flex-end;
+  }
 }

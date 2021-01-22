@@ -10,7 +10,7 @@
   .news-list-container {
     flex-direction: column;
   }
-  @media screen and(min-width:$sm) {
+  @media screen and(min-width:$lg) {
     margin-bottom: 100px;
     &__title {
         margin: 100px auto 0;
