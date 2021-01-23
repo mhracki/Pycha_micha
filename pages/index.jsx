@@ -1,5 +1,4 @@
 import Head from "next/head";
-import "../styles/index.scss";
 import React from "react";
 import Navbar from "../components/navbar/navbar";
 import MainHeader from "../components/home/main-header";
@@ -10,7 +9,8 @@ import NewsList from '../components/home/news/news-list';
 import Contact from '../components/home/contact/contact';
 import Sidebar from '../components/navbar/sidebar';
 
-export default function Index({ menu }) {
+export default function Index({ menu,aboutUs,contact }) {
+
   return (
     <div id="App">
       <Head>
@@ -24,15 +24,17 @@ export default function Index({ menu }) {
         <CategoriesList menu={menu.categories} />
       </div>
       <div className="container-big">
-        <AboutUs />
+        <AboutUs aboutUs={aboutUs} />
         <NewsList/>
       </div>
-      <Contact/>
+      <Contact contact={contact}/>
 
     </div>
   );
 };
 export async function getStaticProps() {
   const menu = await fetchAPI("menu");
-  return { props: { menu } };
+  const aboutUs = await fetchAPI("about-us");
+  const contact = await fetchAPI("contact");
+  return { props: { menu,aboutUs,contact } };
 }
