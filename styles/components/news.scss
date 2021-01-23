@@ -27,6 +27,7 @@
       filter: brightness(80%);
       @media screen and(min-height:$sm) {
         position: absolute;
+        height: 100%;
       }
     }
   }
