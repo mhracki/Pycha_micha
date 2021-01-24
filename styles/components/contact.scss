@@ -24,8 +24,7 @@
     }
   }
   &__header {
-    font-size: 16px;
-    padding: 50px 50px 0px;
+    padding: 50px 50px 0;
     font-size: 36px;
     font-weight: 900;
     margin-left: auto;
@@ -35,7 +34,7 @@
       content: "Mapa";
     }
     @media screen and(min-width:$sm) {
-      margin-bottom: 0px;
+      margin-bottom: 0;
       width: 25%;
       &::before {
         content: "Kontakt";
@@ -43,8 +42,7 @@
     }
   }
   .contact__header-mobile {
-    font-size: 16px;
-    padding: 50px 50px 0px;
+    padding: 50px 50px 0;
     font-size: 36px;
     font-weight: 900;
     margin-left: auto;
@@ -122,6 +120,11 @@
         &__wrap {
           width: fit-content;
           margin: auto;
+          ul{
+            padding:0;
+            list-style: none;
+            margin: 0;
+          }
         }
 
         @media screen and(min-width:$sm) {
