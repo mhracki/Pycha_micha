@@ -6,7 +6,7 @@ const Contact = ({contact}) => {
   const md = MarkdownIt();
 
   return (
-    <div className=" flex contact">
+    <div id="contact" className=" flex contact">
       <div className="contact__img-container">
         <img src="../images/piwnica.webp" />
       </div>

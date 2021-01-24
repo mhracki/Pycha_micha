@@ -29,7 +29,9 @@
   top: 5%;
   height: 100%;
   width: 100%;
-
+  p{
+    margin:0;
+  }
   @media screen and (min-width: $sm) {
     font-size: 60px;
     font-weight: 900;
