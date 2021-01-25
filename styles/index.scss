@@ -14,7 +14,8 @@
 
 @font-face {
   font-family: "Poppins";
-  src: local("Poppins"), url(/fonts/Poppins-Regular.ttf) format("truetype");
+  src: local("Poppins"), url(https://pycha-micha.vercel.app/fonts/Poppins-Regular.ttf) format("truetype");
+  font-display: swap;
 }
 * {
   font-family: Poppins, serif;
