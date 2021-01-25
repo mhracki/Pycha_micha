@@ -1,5 +1,6 @@
 import React from "react";
 import MarkdownIt from 'markdown-it';
+import Image from 'next/image'
 
 const AboutUs = ({aboutUs}) => {
   const md = MarkdownIt();
@@ -7,7 +8,7 @@ const AboutUs = ({aboutUs}) => {
   return (
     <div className=" flex about-us">
       <div className="about-us__img-container">
-        <img src="../images/about-us1.webp" />
+        <Image src="/images/about-us1.webp" layout='fill' objectFit="cover" />
       </div>
       <div className="about-us__text">
         <div className="about-us__text__title">O nas</div>

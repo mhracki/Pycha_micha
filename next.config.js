@@ -3,6 +3,9 @@ const withCss = require('@zeit/next-css');
 const path = require('path')
 
 module.exports =withCss( withSass({
+    images: {
+        domains: ["res.cloudinary.com"],
+    },
 //   webpack: config => {
 //     config.module.rules.forEach(rule => {
 //       if (rule.test.toString().includes('.scss')) {

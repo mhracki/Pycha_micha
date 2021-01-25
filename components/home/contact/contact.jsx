@@ -1,6 +1,7 @@
 import React from "react";
 import GoogleMap from "./map";
 import MarkdownIt from 'markdown-it';
+import Image from "next/image";
 
 const Contact = ({contact}) => {
   const md = MarkdownIt();
@@ -8,7 +9,8 @@ const Contact = ({contact}) => {
   return (
     <div id="contact" className=" flex contact">
       <div className="contact__img-container">
-        <img src="../images/piwnica.webp" />
+        <Image src="/images/piwnica.webp" layout='fill' objectFit="cover" />
+
       </div>
       <div className="contact__container">
         <div className="contact__header"/>

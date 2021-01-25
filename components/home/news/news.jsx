@@ -1,4 +1,5 @@
 import React from "react";
+import Image from 'next/image';
 import MarkdownIt from "markdown-it";
 
 const News = (props) => {
@@ -9,7 +10,7 @@ const News = (props) => {
     <div className="news" key={title}>
       <div className="news__wrapper">
         <div className="news__wrapper-img">
-          <img src={img ? img : "/images/logo.svg"} alt={title} />
+          <Image src={img ? img : "/images/logo.svg"} alt={title} layout='fill' />
         </div>
         <div className="news__date flex">Opublikowano: {date}</div>
         <div className="news__text flex">{title}</div>

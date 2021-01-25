@@ -3,6 +3,8 @@ import { useRouter } from "next/router";
 import Food from "./food";
 import { getMedia } from "../../api/media";
 import { convertId } from "../../helpers/convert-string-to-id";
+import Image from "next/image";
+
 
 const FoodList = ({ foodList }) => {
   const router = useRouter();
@@ -40,7 +42,8 @@ const FoodList = ({ foodList }) => {
               </div>
             </div>
             <div className="food-list__img">
-              {y.img && <img src={getMedia(y.img)} alt={y.name} />}
+              {y.img && <Image src={getMedia(y.img)} objectFit={"cover"} className="food-list__img img" layout='fill' alt={y.name} />}
+
             </div>
           </div>
         );
