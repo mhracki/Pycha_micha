@@ -9,6 +9,8 @@ import NewsList from "../components/home/news/news-list";
 import Contact from "../components/home/contact/contact";
 import Sidebar from "../components/navbar/sidebar";
 
+
+
 export default function Index({ menu, aboutUs, contact, slogan,metaTags,news }) {
   return (
     <div id="App">

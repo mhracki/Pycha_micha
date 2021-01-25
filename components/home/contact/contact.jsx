@@ -1,8 +1,10 @@
 import React from "react";
-import GoogleMap from "./map";
 import MarkdownIt from 'markdown-it';
 import Image from "next/image";
+import GoogleMap from "./map";
+import LazyLoad from 'react-lazyload';
 
+// const GoogleMap  = lazy(() => import('./map'));
 const Contact = ({contact}) => {
   const md = MarkdownIt();
 
@@ -38,7 +40,10 @@ const Contact = ({contact}) => {
             </div>
             <div className="map">
               <div className="map__wrapper">
+                <LazyLoad>
                 <GoogleMap />
+
+                </LazyLoad>
               </div>
             </div>
           </div>

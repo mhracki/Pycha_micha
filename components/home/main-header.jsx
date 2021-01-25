@@ -8,7 +8,7 @@ const MainHeader = ({slogan}) => {
   return (
     <div className="flex">
       <div className="wrapper">
-        <img className="main-photo" src="/images/burger1.jpg" />
+        <img className="main-photo" src="/images/burger1.webp" />
         <div className="slogan" >
           <div className="slogan-text" dangerouslySetInnerHTML={{__html:md.render(slogan.slogan)}}/>
           <div className="button">
